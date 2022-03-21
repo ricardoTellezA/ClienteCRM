@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
+import Link from "next/link";
+
 import { useRouter } from "next/router";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -138,6 +140,13 @@ const Login = () => {
                   <p>{formik.errors.password}</p>
                 </div>
               )}
+              {/* BOTON QUE ME LLEVE A CREAR CENTA */}
+              <Link href="/nuevacuenta">
+                <a >Crear Cuenta</a>
+              </Link>
+                
+                   
+
               <input
                 type="submit"
                 className="bg-gray-800 w-full mt-5 p-2 text-white uppercase hover:bg-gray-900"
